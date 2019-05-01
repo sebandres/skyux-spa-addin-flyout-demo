@@ -7,13 +7,13 @@ import { AddinClientShowFlyoutArgs } from '@blackbaud/sky-addin-client';
 })
 export class FlyoutService {
   private records: any[] = [
-    { id: '1', name: 'Troy Barnes', constituentCode: 'Alumnus', latestGift: 175, status: 'Paid' },
-    { id: '2', name: 'Britta Perry', constituentCode: 'Friend', latestGift: 5, status: 'Past due' },
-    { id: '3', name: 'Pierce Hawthorne', constituentCode: 'Board Member', latestGift: 1500, status: 'Paid' },
-    { id: '4', name: 'Annie Edison', constituentCode: 'Alumnus', latestGift: 100, status: 'Paid' },
-    { id: '5', name: 'Shirley Bennett', constituentCode: 'Board Member', latestGift: 250, status: 'Paid' },
-    { id: '6', name: 'Jeff Winger', constituentCode: 'Friend', latestGift: 250, status: 'Paid' },
-    { id: '7', name: 'Abed Nadir', constituentCode: 'Major Donor', latestGift: 100000, status: 'Paid' }
+    { id: '1', name: 'Troy Barnes', constituentCode: 'Alumnus', status: 'Paid' },
+    { id: '2', name: 'Britta Perry', constituentCode: 'Friend', status: 'Past due' },
+    { id: '3', name: 'Pierce Hawthorne', constituentCode: 'Board Member', status: 'Paid' },
+    { id: '4', name: 'Annie Edison', constituentCode: 'Alumnus', status: 'Paid' },
+    { id: '5', name: 'Shirley Bennett', constituentCode: 'Board Member', status: 'Paid' },
+    { id: '6', name: 'Jeff Winger', constituentCode: 'Friend', status: 'Paid' },
+    { id: '7', name: 'Abed Nadir', constituentCode: 'Major Donor', status: 'Paid' }
   ];
 
   constructor(
