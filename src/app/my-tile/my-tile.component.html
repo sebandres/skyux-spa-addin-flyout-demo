@@ -15,6 +15,7 @@
       [defaultView]="grid"
     >
       <sky-list-view-grid
+        [rowHighlightedId]="rowHighlightedId"
         #grid
       >
         <sky-grid-column
@@ -49,4 +50,8 @@
       </button>
     </ng-template>
   </div>
+
+  <p>
+    <button type="button" class="sky-btn sky-btn-default" style="display: inline-block" (click)="closeFlyout()">Close flyout</button>
+  </p>
 </div>
