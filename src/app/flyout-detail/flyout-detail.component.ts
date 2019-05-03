@@ -24,16 +24,6 @@ export class FlyoutDetailComponent implements OnInit {
   public ngOnInit() {
     this.addinClientService.args.subscribe((args: AddinClientInitArgs) => {
       this.record = args.context.data;
-
-      if (this.record) {
-        this.addinClientService.flyoutNextClick.subscribe(() => {
-          this.flyoutSvc.showFlyoutForNextRecord(this.record.id);
-        });
-
-        this.addinClientService.flyoutPreviousClick.subscribe(() => {
-          this.flyoutSvc.showFlyoutForPreviousRecord(this.record.id);
-        });
-      }
     });
 
     if (this.id) {
