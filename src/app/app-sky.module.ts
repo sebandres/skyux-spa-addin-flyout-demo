@@ -27,6 +27,7 @@ import {
   SkyListViewGridModule
 } from '@skyux/list-builder-view-grids';
 import { SkyModalModule } from '@skyux/modals';
+import { SkyTilesModule } from '@skyux/tiles';
 
 @NgModule({
   exports: [
@@ -37,6 +38,7 @@ import { SkyModalModule } from '@skyux/modals';
     SkyListModule,
     SkyListViewGridModule,
     SkyModalModule,
+    SkyTilesModule,
     SkyPageSummaryModule
   ]
 })

@@ -11,14 +11,18 @@ import {
   AppSkyModule
 } from './app-sky.module';
 import { SampleModalComponent } from './sample-modal/sample-modal.component';
+import { SkyAddinExternalTileComponent, SkyAddinModule } from '@blackbaud-internal/skyux-lib-addin-host';
+import { HelpWidgetService } from '@blackbaud/skyux-lib-help';
 
 @NgModule({
+  imports: [SkyAddinModule],
   exports: [
     AppSkyModule
   ],
   providers: [
-    AddinClientService
+    AddinClientService,
+    HelpWidgetService
   ],
-  entryComponents: [SampleModalComponent]
+  entryComponents: [SampleModalComponent, SkyAddinExternalTileComponent]
 })
 export class AppExtrasModule { }
