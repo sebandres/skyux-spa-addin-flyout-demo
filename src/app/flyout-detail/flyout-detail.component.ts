@@ -6,6 +6,8 @@ import {
 import { FlyoutService } from '../shared/services/flyout.service';
 import { AddinClientService } from '@blackbaud/skyux-lib-addin-client';
 import { AddinClientInitArgs } from '@blackbaud/sky-addin-client';
+import { SkyModalService } from '@skyux/modals';
+import { SampleModalComponent } from '../sample-modal/sample-modal.component';
 
 @Component({
   selector: 'flyout-detail',
@@ -18,7 +20,8 @@ export class FlyoutDetailComponent implements OnInit {
 
   constructor(
     private flyoutSvc: FlyoutService,
-    private addinClientService: AddinClientService
+    private addinClientService: AddinClientService,
+    private modal: SkyModalService
   ) { }
 
   public ngOnInit() {
@@ -29,5 +32,15 @@ export class FlyoutDetailComponent implements OnInit {
     if (this.id) {
       this.record = this.flyoutSvc.getRecordById(this.id);
     }
+  }
+
+  public openModal(): void {
+    const options: any = {
+    };
+
+    let modalInstanceType: any = SampleModalComponent;
+
+    this.modal.open(modalInstanceType, options);
+
   }
 }

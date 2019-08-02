@@ -10,6 +10,7 @@ import {
 import {
   AppSkyModule
 } from './app-sky.module';
+import { SampleModalComponent } from './sample-modal/sample-modal.component';
 
 @NgModule({
   exports: [
@@ -17,6 +18,7 @@ import {
   ],
   providers: [
     AddinClientService
-  ]
+  ],
+  entryComponents: [SampleModalComponent]
 })
 export class AppExtrasModule { }
